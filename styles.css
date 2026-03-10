@@ -6,7 +6,7 @@
     --surface-color: #111111;
     --surface-light: #1a1a1a;
     --text-primary: #ffffff;
-    --text-secondary: #000000;
+    --text-secondary: #ffffff;
 
     --accent-1: #ff4500;
     /* OrangeRed */
@@ -33,6 +33,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -180,7 +181,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 5%;
+    padding: 10px 5%;
     z-index: 100;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
@@ -199,7 +200,7 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
-    color: #000;
+    color: #000000;
 }
 
 .logo span {
@@ -212,7 +213,7 @@ body {
 }
 
 .nav-links a {
-    color: #555;
+    color: #000000;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -220,27 +221,17 @@ body {
 }
 
 .nav-links a:hover {
-    color: #000;
+    color: #ffffff;
 }
 
-.social-nav {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.social-nav a {
-    color: #000;
-    font-size: 1.6rem;
-    transition: var(--transition-smooth);
+.contact-nav {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.social-nav a:hover {
-    color: var(--accent-1);
-    transform: translateY(-3px);
+.nav-contact-btn {
+    padding: 8px 20px;
+    font-size: 0.95rem;
 }
 
 /* =========================================
@@ -382,7 +373,7 @@ body {
 ========================================= */
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 30px;
 }
 
@@ -510,7 +501,7 @@ body {
 ========================================= */
 .showcase-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
     gap: 30px;
 }
 
@@ -582,7 +573,7 @@ body {
 ========================================= */
 .posters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 40px;
 }
 
