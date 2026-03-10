@@ -185,8 +185,6 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
 }
 
 .nav-content {
@@ -269,8 +267,8 @@ body {
     opacity: 0.5;
     z-index: 0;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
     overflow: hidden;
 }
 
@@ -284,8 +282,8 @@ body {
 .hero-bg-posters-pattern {
     width: 150vw;
     height: 100%;
-    background-image: 
-        url('assets/images/CatharsisPoster_1.png'), 
+    background-image:
+        url('assets/images/CatharsisPoster_1.png'),
         url('assets/images/KINGVAMP_!.png'),
         url('assets/images/Bugonia.png'),
         url('assets/images/IntroSem.png'),
@@ -293,18 +291,23 @@ body {
         url('assets/images/LightPainting.png'),
         url('assets/images/HometownHues_1.jpg'),
         url('assets/images/Selections.png');
-    background-size: 
+    background-size:
         20%, 25%, 20%, 25%,
         20%, 22%, 20%, 25%;
-    background-position: 
+    background-position:
         5% 25%, 18% 10%, 32% 60%, 45% 80%,
         60% 15%, 72% 50%, 85% 80%, 95% 30%;
     background-repeat: no-repeat;
 }
 
 @keyframes scrollPosters {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-150vw); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-150vw);
+    }
 }
 
 .hero-content {
@@ -570,7 +573,7 @@ body {
 }
 
 .item-details p {
-    color: var(--text-secondary);
+    color: #FFFFFF;
     font-size: 0.9rem;
 }
 
