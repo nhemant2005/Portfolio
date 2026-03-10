@@ -53,39 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-up');
     animatedElements.forEach(el => observer.observe(el));
 
-    // 3. Showcase Tab Switching Logic
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const galleries = document.querySelectorAll('.showcase-gallery');
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all buttons
-            tabBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
-            btn.classList.add('active');
-
-            const targetId = btn.getAttribute('data-target');
-
-            // Hide all galleries
-            galleries.forEach(gallery => {
-                gallery.classList.add('hidden');
-                // Remove visible class from inner items to re-animate if desired
-                 const items = gallery.querySelectorAll('.fade-up');
-                 items.forEach(item => item.classList.remove('visible'));
-            });
-
-            // Show target gallery
-            const targetGallery = document.getElementById(`${targetId}-gallery`);
-            targetGallery.classList.remove('hidden');
-            
-            // Re-trigger animations for the newly shown items
-            setTimeout(() => {
-                const items = targetGallery.querySelectorAll('.fade-up');
-                items.forEach((item, index) => {
-                    item.style.animationDelay = `${index * 0.1}s`;
-                    item.classList.add('visible');
-                });
-            }, 50);
-        });
-    });
 });
